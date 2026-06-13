@@ -28,7 +28,7 @@ stages {
             echo "Fetching latest code from GitHub"
 
             git branch: 'master',
-            url: 'https://github.com/SabaSiva2916/Jenkins_Project.git'
+            url: 'https://github.com/sathya9779/Cucumber.git'
         }
     }
 
@@ -68,7 +68,7 @@ post {
     always {
 
         cucumber buildStatus: 'UNSTABLE',
-        fileIncludePattern: '**/target/s.json',
+        fileIncludePattern: '**/target/output.json',
         sortingMethod: 'ALPHABETICAL'
     }
 
